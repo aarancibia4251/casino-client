@@ -20,7 +20,7 @@ const NavItemContent = ({ open, content }: Props) => {
           <div className="drop-title">{content.title}</div>
         </li>
         <li>
-          <NavContentMessages />
+          <NavContentMessages messages={content.messages} />
         </li>
         <li>
           <NavLinkFooter footerText={content.footerText} />

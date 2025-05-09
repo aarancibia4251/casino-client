@@ -1,20 +1,22 @@
+import React, { useEffect, useState } from "react";
 import HomePage from "./assets/images/logo-icon.png";
 import LightIcon from "./assets/images/logo-light-icon.png";
 import LogoText from "./assets/images/logo-text.png";
 import LogoLightText from "./assets/images/logo-light-text.png";
 import NavBarNav from "./components/templates/navbar-nav/NavBarNav.component";
-import React from "react";
 import Sidebar from "./components/templates/sidebar/Sidebar.component";
+import Preloader from "./components/organisms/preloader/Preloader.component";
 
 export default function Root(props) {
+  const [preloader, setPreloader] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setPreloader(false);
+    }, 500);
+  }, []);
   return (
     <div id="main-wrapper">
-      {/*<div className="preloader">
-        <div className="loader">
-          <div className="loader__figure"></div>
-          <p className="loader__label">Admin Pro</p>
-        </div>
-      </div>*/}
+      {preloader ? <Preloader /> : null}
       <header className="topbar">
         <nav className="navbar top-navbar navbar-expand-md navbar-light">
           <div className="navbar-header">

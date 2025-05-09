@@ -1,47 +1,36 @@
 import React from "react";
+import { NavItemContentMessageProps } from "../../../core/domain/NavItemProps";
 
-const NavContentMessages = () => {
+interface Props {
+  messages: NavItemContentMessageProps[];
+}
+
+const NavContentMessages = ({ messages }: Props) => {
   return (
     // Todo - Space in messages are narrow
     <div className="message-center">
-      <a href="#">
-        <div className="btn btn-danger btn-circle">
-          <i className="fa fa-link"></i>
-        </div>
-        <div className="mail-contnet">
-          <h5>Luanch Admin</h5>{" "}
-          <span className="mail-desc">
-                                Just see the my new admin!
+      {messages.map((message) => (
+        <a>
+          {message.img ? (
+              <div className="user-img">
+                <img src={message.img} alt="user" className="img-circle" />{" "}
+                <span className={`profile-status ${message.status} pull-right`}></span>
+              </div>
+            ) : (
+              <div className={`btn btn-${message.type} btn-circle`}>
+                <i className={message.icon}></i>
+              </div>
+            )}
+            <div className="mail-contnet">
+              <h5>{message.title}</h5>{" "}
+              <span className="mail-desc">
+                                {message.message}
                               </span>{" "}
-          <span className="time">9:30 AM</span>
-        </div>
-      </a>
-
-      <a href="#">
-        <div className="btn btn-success btn-circle">
-          <i className="ti-calendar"></i>
-        </div>
-        <div className="mail-contnet">
-          <h5>Event today</h5>{" "}
-          <span className="mail-desc">
-                                Just a reminder that you have event
-                              </span>
-          <span className="time">9:10 AM</span>
-        </div>
-      </a>
-
-      <a href="#">
-        <div className="btn btn-primary btn-circle">
-          <i className="ti-user"></i>
-        </div>
-        <div className="mail-contnet">
-          <h5>Pavan kumar</h5>{" "}
-          <span className="mail-desc">
-                                Just see the my admin!
-                              </span>{" "}
-          <span className="time">9:02 AM</span>
-        </div>
-      </a>
+              <span className="time">9:30 AM</span>
+            </div>
+          </a>
+        ))
+      }
     </div>
   );
 };

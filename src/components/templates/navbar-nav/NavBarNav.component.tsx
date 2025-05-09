@@ -1,47 +1,18 @@
 import React, { createContext } from "react";
 import UserPhoto from "../../../assets/images/users/1.jpg";
-import UserPhoto2 from "../../../assets/images/users/2.jpg";
-import UserPhoto3 from "../../../assets/images/users/3.jpg";
-import UserPhoto4 from "../../../assets/images/users/4.jpg";
 import UserImgBig from "../../../assets/images/big/img1.jpg";
 import UserImgBig2 from "../../../assets/images/big/img2.jpg";
 import UserImgBig3 from "../../../assets/images/big/img3.jpg";
 import NavItem from "../../organisms/nav-item/NavItem.component";
-
-const navItems = [
-  {
-    id: 1,
-    icon: "mdi mdi-message",
-    content: {
-      title: "Notifications",
-      footerText: "Check all notifications",
-    },
-  },
-];
+import { navItems } from "../../../data";
+import NavItemSearchBox from "../nav-item-search-box/NavItemSearchBox.component";
 
 const NavItemContext = createContext(null);
 
 const NavBarNav = () => {
   return (
     <ul className="navbar-nav my-lg-0">
-      <li className="nav-item hidden-xs-down search-box">
-        <a
-          className="nav-link hidden-sm-down waves-effect waves-dark"
-          href=""
-        >
-          <i className="ti-search"></i>
-        </a>
-        <form className="app-search">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search & enter"
-          />{" "}
-          <a className="srh-btn">
-            <i className="ti-close"></i>
-          </a>
-        </form>
-      </li>
+      <NavItemSearchBox />
 
       <NavItemContext.Provider
         value={{
@@ -52,119 +23,6 @@ const NavBarNav = () => {
         {navItems.map((navItem) => (
           <NavItem key={navItem.id} {...navItem}></NavItem>
         ))}
-
-        <li className="nav-item dropdown">
-          <a
-            className="nav-link dropdown-toggle waves-effect waves-dark"
-            href=""
-            id="2"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {" "}
-            <i className="mdi mdi-email"></i>
-            <div className="notify">
-              <span className="heartbit"></span>
-              <span className="point"></span>
-            </div>
-          </a>
-          <div
-            className="dropdown-menu mailbox dropdown-menu-right animated bounceInDown"
-            aria-labelledby="2"
-          >
-            <ul>
-              <li>
-                <div className="drop-title">
-                  You have 4 new messages
-                </div>
-              </li>
-              <li>
-                <div className="message-center">
-                  <a href="#">
-                    <div className="user-img">
-                      <img
-                        src={UserPhoto}
-                        alt="user"
-                        className="img-circle"
-                      />{" "}
-                      <span className="profile-status online pull-right"></span>
-                    </div>
-                    <div className="mail-contnet">
-                      <h5>Pavan kumar</h5>{" "}
-                      <span className="mail-desc">
-                                  Just see the my admin!
-                                </span>{" "}
-                      <span className="time">9:30 AM</span>
-                    </div>
-                  </a>
-
-                  <a href="#">
-                    <div className="user-img">
-                      <img
-                        src={UserPhoto2}
-                        alt="user"
-                        className="img-circle"
-                      />{" "}
-                      <span className="profile-status busy pull-right"></span>
-                    </div>
-                    <div className="mail-contnet">
-                      <h5>Sonu Nigam</h5>{" "}
-                      <span className="mail-desc">
-                                  I've sung a song! See you at
-                                </span>{" "}
-                      <span className="time">9:10 AM</span>
-                    </div>
-                  </a>
-
-                  <a href="#">
-                    <div className="user-img">
-                      <img
-                        src={UserPhoto3}
-                        alt="user"
-                        className="img-circle"
-                      />{" "}
-                      <span className="profile-status away pull-right"></span>
-                    </div>
-                    <div className="mail-contnet">
-                      <h5>Arijit Sinh</h5>{" "}
-                      <span className="mail-desc">I am a singer!</span>{" "}
-                      <span className="time">9:08 AM</span>
-                    </div>
-                  </a>
-
-                  <a href="#">
-                    <div className="user-img">
-                      <img
-                        src={UserPhoto4}
-                        alt="user"
-                        className="img-circle"
-                      />{" "}
-                      <span className="profile-status offline pull-right"></span>
-                    </div>
-                    <div className="mail-contnet">
-                      <h5>Pavan kumar</h5>{" "}
-                      <span className="mail-desc">
-                                  Just see the my admin!
-                                </span>{" "}
-                      <span className="time">9:02 AM</span>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <a
-                  className="nav-link text-center"
-                  href=";"
-                >
-                  {" "}
-                  <strong>See all e-Mails</strong>
-                  <i className="fa fa-angle-right"></i>{" "}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
 
         <li className="nav-item dropdown mega-dropdown">
           <a
