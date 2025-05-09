@@ -3,9 +3,9 @@ import HomePage from "./assets/images/logo-icon.png";
 import LightIcon from "./assets/images/logo-light-icon.png";
 import LogoText from "./assets/images/logo-text.png";
 import LogoLightText from "./assets/images/logo-light-text.png";
-import NavBarNav from "./components/templates/navbar-nav/NavBarNav.component";
-import Sidebar from "./components/templates/sidebar/Sidebar.component";
-import Preloader from "./components/organisms/preloader/Preloader.component";
+import NavBarNav from "./core/ui/components/templates/navbar-nav/NavBarNav.component";
+import Sidebar from "./core/ui/components/templates/sidebar/Sidebar.component";
+import Preloader from "./core/ui/components/organisms/preloader/Preloader.component";
 
 export default function Root(props) {
   const [preloader, setPreloader] = useState(true);
@@ -20,7 +20,7 @@ export default function Root(props) {
       <header className="topbar">
         <nav className="navbar top-navbar navbar-expand-md navbar-light">
           <div className="navbar-header">
-            <a className="navbar-brand" href="index.html">
+            <a className="navbar-brand">
               <b>
                 <img src={HomePage} alt="homepage" className="dark-logo" />
 

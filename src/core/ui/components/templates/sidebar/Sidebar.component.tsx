@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { sidebarItems } from "../../../data";
+import { sidebarItems } from "../../../../../data";
 import SidebarNav from "../sidebar-nav/SidebarNav.component";
 import SidebarNavItem from "../../organisms/sidebar-nav-item/SidebarNavItem.component";
 

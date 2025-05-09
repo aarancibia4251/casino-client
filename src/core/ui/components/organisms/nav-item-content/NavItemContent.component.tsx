@@ -1,5 +1,5 @@
 import React from "react";
-import { NavItemContentProps } from "../../../core/domain/NavItemProps";
+import { NavItemContentProps } from "../../../../domain/NavItemProps";
 import NavContentMessages from "../../templates/nav-content-messages/NavContentMessages.component";
 import NavLinkFooter from "../../molecules/nav-link-footer/NavLinkFooter.component";
 

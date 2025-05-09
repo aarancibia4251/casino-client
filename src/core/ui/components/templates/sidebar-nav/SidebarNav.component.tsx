@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SidebarNavItem from "../../organisms/sidebar-nav-item/SidebarNavItem.component";
-import { SidebarConfigurationModule } from "../../../core/domain/SidebarConfiguration";
+import { SidebarConfigurationModule } from "../../../../domain/SidebarConfiguration";
 
 interface Props {
   module: SidebarConfigurationModule;

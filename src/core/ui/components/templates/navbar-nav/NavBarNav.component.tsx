@@ -1,10 +1,10 @@
 import React, { createContext } from "react";
-import UserPhoto from "../../../assets/images/users/1.jpg";
-import UserImgBig from "../../../assets/images/big/img1.jpg";
-import UserImgBig2 from "../../../assets/images/big/img2.jpg";
-import UserImgBig3 from "../../../assets/images/big/img3.jpg";
+import UserPhoto from "../../../../../assets/images/users/1.jpg";
+import UserImgBig from "../../../../../assets/images/big/img1.jpg";
+import UserImgBig2 from "../../../../../assets/images/big/img2.jpg";
+import UserImgBig3 from "../../../../../assets/images/big/img3.jpg";
 import NavItem from "../../organisms/nav-item/NavItem.component";
-import { navItems } from "../../../data";
+import { navItems } from "../../../../../data";
 import NavItemSearchBox from "../nav-item-search-box/NavItemSearchBox.component";
 
 const NavItemContext = createContext(null);

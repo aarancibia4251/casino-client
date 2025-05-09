@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarNavSubItem from "../sidebar-nav-sub-item/SidebarNavSubItem.component";
-import { SidebarConfigurationSubModule } from "../../../core/domain/SidebarConfiguration";
+import { SidebarConfigurationSubModule } from "../../../../domain/SidebarConfiguration";
 
 interface Props {
   subModule: SidebarConfigurationSubModule;
