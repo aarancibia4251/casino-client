@@ -1,5 +1,5 @@
 import React from "react";
-import { NavItemContentMessageProps } from "../../../../domain/NavItemProps";
+import { NavItemContentMessageProps } from "../../../interfaces/NavItemProps";
 
 interface Props {
   messages: NavItemContentMessageProps[];

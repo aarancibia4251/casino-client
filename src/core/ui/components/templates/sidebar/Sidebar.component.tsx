@@ -9,7 +9,7 @@ const Sidebar = () => {
     isOpen: false,
   });
 
-  const handleOpen = (index: string) => {
+  const handleOpen = (index: number) => {
     setQuickAccess((prevState) => ({
       ...prevState,
       isOpen: !prevState.isOpen,

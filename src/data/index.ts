@@ -1,11 +1,12 @@
 import UserPhoto from "../assets/images/users/1.jpg";
 import Profile from "../assets/images/users/profile.png";
-import { SidebarConfiguration } from "../core/domain/SidebarConfiguration";
+import { SidebarConfiguration } from "../core/ui/interfaces/SidebarConfiguration";
 
 export const navItems = [
   {
     id: 1,
     icon: "mdi mdi-message",
+    isOpen: false,
     content: {
       title: "Notifications",
       messages: [
@@ -24,6 +25,7 @@ export const navItems = [
   {
     id: 2,
     icon: "mdi mdi-email",
+    isOpen: false,
     content: {
       title: "You have 4 new messages",
       messages: [
@@ -45,7 +47,7 @@ export const sidebarItems: SidebarConfiguration = {
   id: "1",
   userName: "Alexis Arancibia",
   quickAccess: {
-    id: "1",
+    id: 1,
     img: Profile,
     title: "Alexis Arancibia",
     links: [
@@ -77,7 +79,7 @@ export const sidebarItems: SidebarConfiguration = {
       title: "PERSONAL",
       subModules: [
         {
-          id: "1",
+          id: 1,
           icon: "mdi-gauge",
           title: "Dashboard",
           counter: 4,
@@ -97,7 +99,7 @@ export const sidebarItems: SidebarConfiguration = {
           ],
         },
         {
-          id: "2",
+          id: 2,
           icon: "mdi-bullseye",
           title: "Apps",
           links: [
@@ -122,7 +124,7 @@ export const sidebarItems: SidebarConfiguration = {
       title: "FORMS, TABLE &amp; WIDGETS",
       subModules: [
         {
-          id: "1",
+          id: 1,
           icon: "mdi-file",
           title: "Forms",
           counter: 4,
@@ -142,7 +144,7 @@ export const sidebarItems: SidebarConfiguration = {
           ],
         },
         {
-          id: "2",
+          id: 2,
           icon: "mdi-table",
           title: "Tables",
           links: [

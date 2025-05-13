@@ -1,6 +1,7 @@
 export interface NavItemProps {
   id: number;
   icon: string;
+  isOpen: boolean;
   content: NavItemContentProps;
 }
 

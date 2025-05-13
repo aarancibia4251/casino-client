@@ -6,10 +6,13 @@ import UserImgBig3 from "../../../../../assets/images/big/img3.jpg";
 import NavItem from "../../organisms/nav-item/NavItem.component";
 import { navItems } from "../../../../../data";
 import NavItemSearchBox from "../nav-item-search-box/NavItemSearchBox.component";
+import { useToggle } from "../../../../shared/hooks/useToggle";
 
-const NavItemContext = createContext(null);
+export const NavItemContext = createContext(null);
 
 const NavBarNav = () => {
+  const { handleOpen, elements } = useToggle(navItems);
+
   return (
     <ul className="navbar-nav my-lg-0">
       <NavItemSearchBox />
@@ -20,8 +23,12 @@ const NavBarNav = () => {
           messages: [],
         }}
       >
-        {navItems.map((navItem) => (
-          <NavItem key={navItem.id} {...navItem}></NavItem>
+        {elements.map((navItem) => (
+          <NavItem
+            key={navItem.id}
+            {...navItem}
+            handleOpen={handleOpen}
+          ></NavItem>
         ))}
 
         <li className="nav-item dropdown mega-dropdown">

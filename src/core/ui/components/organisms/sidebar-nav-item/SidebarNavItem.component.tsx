@@ -1,10 +1,10 @@
 import React from "react";
 import SidebarNavSubItem from "../sidebar-nav-sub-item/SidebarNavSubItem.component";
-import { SidebarConfigurationSubModule } from "../../../../domain/SidebarConfiguration";
+import { SidebarConfigurationSubModule } from "../../../interfaces/SidebarConfiguration";
 
 interface Props {
   subModule: SidebarConfigurationSubModule;
-  handleOpen: (index: string) => void;
+  handleOpen: (index: number) => void;
   className?: string;
 }
 

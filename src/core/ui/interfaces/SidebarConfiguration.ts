@@ -6,7 +6,7 @@ export interface SidebarConfiguration {
 }
 
 export interface SidebarConfigurationQuickAccess {
-  id: string;
+  id: number;
   img: string;
   title: string;
   links: SidebarConfigurationLink[];
@@ -25,7 +25,7 @@ export interface SidebarConfigurationLink {
 }
 
 export interface SidebarConfigurationSubModule {
-  id: string;
+  id: number;
   title: string;
   links: SidebarConfigurationLink[];
   isOpen?: boolean;
