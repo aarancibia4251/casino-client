@@ -7,4 +7,8 @@ export class CourseServiceImpl implements CourseService {
   getCourses(): Promise<CourseEntity[]> {
     return this.courseRepository.getCourses();
   }
+
+  getCourse(id: string): Promise<CourseEntity> {
+    return this.courseRepository.getCourse(id);
+  }
 }

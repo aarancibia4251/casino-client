@@ -3,4 +3,6 @@ export class CourseEntity {
   name: string;
   created_at: string;
   updated_at: string;
+  image: string;
+  video: string;
 }
