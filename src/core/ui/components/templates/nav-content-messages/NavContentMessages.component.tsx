@@ -5,7 +5,7 @@ interface Props {
   messages: NavItemContentMessageProps[];
 }
 
-const NavContentMessages = ({ messages }: Props) => {
+const NavContentMessages = ({ messages = [] }: Props) => {
   return (
     // Todo - Space in messages are narrow
     <div className="message-center">
