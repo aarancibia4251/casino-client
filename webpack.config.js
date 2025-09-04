@@ -1,6 +1,6 @@
 const { merge } = require("webpack-merge");
-const Dotenv = require("dotenv-webpack");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
+const webpack = require("webpack");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
@@ -22,9 +22,8 @@ module.exports = (webpackConfigEnv, argv) => {
       ],
     },
     plugins: [
-      new Dotenv({
-        path: "./.env", // or './.env.local', etc.
-        systemvars: true, // include process.env from the system too
+      new webpack.DefinePlugin({
+        "process.env": JSON.stringify(process.env),
       }),
     ],
   });
