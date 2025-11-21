@@ -4,9 +4,10 @@ interface Props {
   open: boolean;
   openNavItemLink: () => void;
   icon: string;
+  image?: any;
 }
 
-const NavItemLink = ({ open, openNavItemLink, icon }: Props) => {
+const NavItemLink = ({ open, openNavItemLink, icon, image }: Props) => {
   return (
     <a
       className="nav-link dropdown-toggle waves-effect waves-dark"
@@ -15,11 +16,21 @@ const NavItemLink = ({ open, openNavItemLink, icon }: Props) => {
       aria-haspopup="true"
       aria-expanded={open}
     >
-      {" "}
-      <i className={icon}></i>
-      <div className="notify">
-        <span className="heartbit"></span> <span className="point"></span>
-      </div>
+      {image ? (
+        <img
+          src={image}
+          alt="user"
+          className="profile-pic"
+        />
+      ) : (
+        <>
+          {" "}
+          <i className={icon}></i>
+          <div className="notify">
+          <span className="heartbit"></span> <span className="point"></span>
+          </div>
+        </>
+      )}
     </a>
   );
 };

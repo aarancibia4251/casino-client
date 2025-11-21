@@ -9,8 +9,8 @@ const NavContentMessages = ({ messages = [] }: Props) => {
   return (
     // Todo - Space in messages are narrow
     <div className="message-center">
-      {messages.map((message) => (
-        <a>
+      {messages.map((message, index) => (
+        <a key={index}>
           {message.img ? (
               <div className="user-img">
                 <img src={message.img} alt="user" className="img-circle" />{" "}

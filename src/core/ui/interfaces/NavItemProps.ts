@@ -3,6 +3,7 @@ export interface NavItemProps {
   icon: string;
   isOpen: boolean;
   content: NavItemContentProps;
+  template?: string;
 }
 
 export interface NavItemContentProps {

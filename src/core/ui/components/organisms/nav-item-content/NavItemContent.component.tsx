@@ -10,11 +10,7 @@ interface Props {
 
 const NavItemContent = ({ open, content }: Props) => {
   return (
-    <div
-      className={`dropdown-menu dropdown-menu-right mailbox animated bounceInDown ${
-        open ? "show" : ""
-      }`}
-    >
+    <>
       <ul>
         <li>
           <div className="drop-title">{content.title}</div>
@@ -26,7 +22,7 @@ const NavItemContent = ({ open, content }: Props) => {
           <NavLinkFooter footerText={content.footerText} />
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

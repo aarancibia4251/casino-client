@@ -5,17 +5,39 @@ import { NavItemProps } from "../../../interfaces/NavItemProps";
 
 interface Props extends NavItemProps {
   handleOpen: (index: number) => void;
+  image?: string;
 }
 
-const NavItem = ({ id, icon, content, isOpen, handleOpen }: Props) => {
+const NavItem = ({
+  id,
+  icon,
+  content,
+  template,
+  isOpen,
+  handleOpen,
+  image,
+}: Props) => {
   return (
     <li className={`nav-item dropdown ${isOpen ? "show" : ""}`}>
       <NavItemLink
         open={isOpen}
         openNavItemLink={() => handleOpen(id)}
         icon={icon}
+        image={image}
       />
-      <NavItemContent open={isOpen} content={content} />
+      <div
+        className={`dropdown-menu dropdown-menu-right mailbox animated bounceInDown ${
+          isOpen ? "show" : ""
+        }`}
+      >
+        {template ? (
+          <ul
+            className="dropdown-user"
+            dangerouslySetInnerHTML={{ __html: template }}></ul>
+        ) : (
+          <NavItemContent open={isOpen} content={content} />
+        )}
+      </div>
     </li>
   );
 };
