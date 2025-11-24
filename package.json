@@ -1,11 +1,11 @@
 {
   "name": "@arancibia/casino-client",
   "scripts": {
-    "start": "webpack serve --port 7090",
+    "start": "webpack serve --port 7090 --env NODE_ENV=local",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
-    "build:cloud": "webpack --mode=production --output.publicPath https://arancibia.b-cdn.net/casino-project/",
+    "build:dev": "webpack --mode=production --env NODE_ENV=development --env ouput.publicPath=https://arancibia.b-cdn.net/casino-project/",
     "analyze": "webpack --mode=production --env analyze",
     "lint": "eslint src --ext js,ts,tsx",
     "format": "prettier --write .",
