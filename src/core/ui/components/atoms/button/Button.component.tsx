@@ -1,7 +1,18 @@
 import React from "react";
+import { Button, theme } from "antd";
 
-const Button = ({ children, className }) => {
-  return <button className={className}>{children}</button>;
+const ButtonComponent = ({ type, className, ...otherProps }) => {
+  const {
+    token: { colorPrimary },
+  } = theme.useToken();
+  return (
+    <Button
+      type={type}
+      variant="solid"
+      style={{ outline: colorPrimary }}
+      {...otherProps}
+    ></Button>
+  );
 };
 
-export default Button;
+export default ButtonComponent;
