@@ -3,7 +3,7 @@ env:
   environment: "dev"
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
 
 jobs:
   deploy:
