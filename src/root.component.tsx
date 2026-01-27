@@ -11,17 +11,22 @@ export default function Root(props) {
       theme={{
         token: {
           // Seed Token
-          colorPrimary: "#178582",
-          colorPrimaryBg: "#1b1e1e",
-          controlOutline: "#2c9790",
+          colorPrimary: "#fff",
+          colorPrimaryBg: "#178582",
+          controlOutline: "#BFA181",
           borderRadius: 2,
-          colorText: "#f4ac60",
+          colorText: "#fff",
           // Alias Token
-          colorBgContainer: "#0A1828",
+          colorBgContainer: "#2c9790",
         },
         components: {
           Layout: {
-            triggerBg: "#BFA181",
+            siderBg: "#2c9790",
+          },
+          Menu: {
+            colorItemTextSelected: "#a63c0d",
+            colorItemBgSelected: "#f2e6d5",
+            iconSize: 15,
           },
         },
       }}

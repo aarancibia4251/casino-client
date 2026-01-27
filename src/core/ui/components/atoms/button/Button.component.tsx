@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, theme } from "antd";
 
-const ButtonComponent = ({ type, className, ...otherProps }) => {
+const ButtonComponent = ({ type, className, style, ...otherProps }) => {
   const {
     token: { colorPrimary },
   } = theme.useToken();
@@ -9,7 +9,7 @@ const ButtonComponent = ({ type, className, ...otherProps }) => {
     <Button
       type={type}
       variant="solid"
-      style={{ outline: colorPrimary }}
+      style={{ outline: colorPrimary, ...style }}
       {...otherProps}
     ></Button>
   );

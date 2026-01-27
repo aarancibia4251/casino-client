@@ -1,6 +1,6 @@
 import React from "react";
 import Sider from "antd/es/layout/Sider";
-import { Menu, MenuProps, theme } from "antd";
+import { Menu, MenuProps } from "antd";
 import {
   DesktopOutlined,
   FileOutlined,
@@ -8,6 +8,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import Logo from "../../../../../assets/images/logo-light-text.png";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -15,7 +16,7 @@ function getItem(
   label: React.ReactNode,
   key: React.Key,
   icon?: React.ReactNode,
-  children?: MenuItem[],
+  children?: MenuItem[]
 ): MenuItem {
   return {
     key,
@@ -41,9 +42,6 @@ const items: MenuItem[] = [
 ];
 
 const Sidebar = ({ collapsed, setCollapsed }) => {
-  const {
-    token: { colorPrimary },
-  } = theme.useToken();
 
   return (
     <Sider
@@ -52,14 +50,19 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
       onCollapse={(onCollapsed) => setCollapsed(onCollapsed)}
       collapsed={collapsed}
       trigger={null}
-      style={{ background: colorPrimary }}
     >
-      <div className="demo-logo-vertical" />
+      <img
+        src={Logo}
+        alt="LOGO"
+        style={{ padding: "15px 10px", height: "64px", width: "100%" }}
+      />
       <Menu
         defaultSelectedKeys={["1"]}
         mode="inline"
         items={items}
-        style={{ background: colorPrimary, borderInlineEnd: "none" }}
+        style={{
+          borderInlineEnd: "none",
+        }}
       />
     </Sider>
   );
