@@ -7,6 +7,7 @@ const ButtonComponent = ({ type, className, style, ...otherProps }) => {
   } = theme.useToken();
   return (
     <Button
+      className={className}
       type={type}
       variant="solid"
       style={{ outline: colorPrimary, ...style }}

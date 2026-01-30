@@ -25,7 +25,7 @@ const LayoutComponent = () => {
         <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
         <Layout>
           <HeaderComponent collapsed={collapsed} setCollapsed={setCollapsed} />
-          <Content style={{ padding: "20px 16px", background: "rgb(249 253 252)" }}>
+          <Content style={{ padding: "20px 16px", background: "rgb(234 244 241)" }}>
             <PageConfiguration />
             <Outlet />
           </Content>

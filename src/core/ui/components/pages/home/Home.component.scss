@@ -1,0 +1,35 @@
+.home {
+
+  &__carousel {
+
+    &--player {
+      height: 480px;
+    }
+  }
+
+  &__card {
+
+    &--presentation {
+      padding: 32px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .home {
+
+    &__carousel {
+
+      &--player {
+        height: 280px;
+      }
+    }
+
+    &__card {
+
+      &--presentation {
+        padding: 20px;
+      }
+    }
+  }
+}
