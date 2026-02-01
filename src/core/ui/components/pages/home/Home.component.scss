@@ -7,6 +7,10 @@
     }
   }
 
+  &__flex {
+    flex-wrap: nowrap !important;
+  }
+
   &__card {
 
     &--presentation {
@@ -23,6 +27,10 @@
       &--player {
         height: 280px;
       }
+    }
+
+    &__flex {
+      flex-wrap: wrap !important;
     }
 
     &__card {

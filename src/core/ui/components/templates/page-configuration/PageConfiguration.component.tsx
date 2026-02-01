@@ -1,16 +1,22 @@
 import React from "react";
-import Breadcrumb from "../../atoms/breadcrumb/Breadcrumb.component";
+import BreadcrumbComponent from "../../atoms/breadcrumb/Breadcrumb.component";
+import { Flex } from "antd";
 
-const PageConfiguration = () => {
+interface Props {
+  title: string;
+}
+
+const PageConfiguration = ({ title }: Props) => {
   return (
-    <div className="row page-titles" style={{ backgroundColor: "inherit" }}>
-      <div className="col-md-5 align-self-center">
-        <h3>Widget Data</h3>
-      </div>
-      <div className="col-md-7 align-self-center">
-        <Breadcrumb />
-      </div>
-    </div>
+    <Flex
+      justify="space-between"
+      wrap
+      className="page-titles"
+      style={{ backgroundColor: "inherit" }}
+    >
+      <h3>{title}</h3>
+      <BreadcrumbComponent />
+    </Flex>
   );
 };
 

@@ -9,7 +9,7 @@ const IconFont = createFromIconfontCN({
 const AvatarComponent = () => {
   return (
     <Avatar
-      size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
+      size={{ xs: 28, sm: 32, md: 40 }}
       icon={<IconFont type="icon-tuichu" />}
     />
   );

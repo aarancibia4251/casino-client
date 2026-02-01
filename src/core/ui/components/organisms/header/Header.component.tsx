@@ -51,7 +51,7 @@ const HeaderComponent = ({ setCollapsed, collapsed }) => {
         >
           <></>
         </ButtonComponent>
-        <div style={{ position: "absolute", right: 15, top: 5 }}>
+        <div style={{ position: "absolute", right: 15, top: 0 }}>
           <DropDownComponent items={items}>
             <AvatarComponent></AvatarComponent>
           </DropDownComponent>

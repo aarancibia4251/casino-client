@@ -28,6 +28,12 @@ export default function Root(props) {
             colorItemBgSelected: "#f2e6d5",
             iconSize: 15,
           },
+          Breadcrumb: {
+            iconFontSize: 11,
+            linkColor: "#178582",
+            linkHoverColor: "#178582",
+            lastItemColor: "#3d5159",
+          },
         },
       }}
     >

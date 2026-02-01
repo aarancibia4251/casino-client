@@ -29,7 +29,11 @@ const HomePage = () => {
         style={cardStyle}
         styles={{ body: { padding: 0, overflow: "hidden" } }}
       >
-        <Flex orientation="horizontal" justify="flex-start" wrap>
+        <Flex
+          className="home__flex"
+          orientation="horizontal"
+          justify="flex-start"
+        >
           <Carousel arrows dotPlacement="end" infinite={false}>
             <div>
               <div
@@ -37,7 +41,7 @@ const HomePage = () => {
                 style={{ position: "relative", paddingTop: "42%" }}
               >
                 <iframe
-                  src="https://player.mediadelivery.net/embed/585837/377ab856-0933-4cb2-8c83-4bae0bb5972d?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
+                  src="https://player.mediadelivery.net/embed/585837/377ab856-0933-4cb2-8c83-4bae0bb5972d?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
                   loading="lazy"
                   style={{
                     border: 0,

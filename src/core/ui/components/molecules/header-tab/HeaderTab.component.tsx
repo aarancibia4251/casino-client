@@ -24,7 +24,6 @@ const HeaderTabComponent: React.FC = () => {
           label: `Tab-${id}`,
           key: id,
           disabled: i === 28,
-          children: `Content of tab ${id}`,
         };
       })}
     />

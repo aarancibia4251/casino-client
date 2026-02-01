@@ -1,13 +1,30 @@
 import React from "react";
+import { Breadcrumb } from "antd";
+import { HomeOutlined, UserOutlined } from "@ant-design/icons";
 
-const Breadcrumb = () => {
+const BreadcrumbComponent = () => {
   return (
-    <ol className="breadcrumb">
-      <li className="breadcrumb-item"><a>Home</a></li>
-      <li className="breadcrumb-item">Widget</li>
-      <li className="breadcrumb-item active">Data</li>
-    </ol>
+    <Breadcrumb
+      items={[
+        {
+          href: "",
+          title: <HomeOutlined />,
+        },
+        {
+          href: "",
+          title: (
+            <>
+              <UserOutlined />
+              <span>Application List</span>
+            </>
+          ),
+        },
+        {
+          title: "Application",
+        },
+      ]}
+    />
   );
 };
 
-export default Breadcrumb;
+export default BreadcrumbComponent;
